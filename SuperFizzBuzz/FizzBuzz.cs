@@ -26,12 +26,25 @@ namespace SuperFizzBuzz
 
         public IEnumerable<string> Run(int min, int max)
         {
-            throw new NotImplementedException();
+            if (max < min)
+            {
+                throw new ArgumentException("Max cannot be less than min.", nameof(max));
+            }
+
+            for (var i = min; i <= max; i++)
+            {
+                yield return Run(i);
+            }
         }
 
         public IEnumerable<string> Run(IEnumerable<int> values)
         {
-            throw new NotImplementedException();
+            if (values is null)
+            {
+                throw new ArgumentNullException(nameof(values));
+            }
+
+            return values.Select(x => Run(x));
         }
     }
 }
