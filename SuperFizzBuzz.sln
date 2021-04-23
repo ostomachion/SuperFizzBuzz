@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassicFizzBuzzDemo", "Clas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFizzBuzzDemo", "SuperFizzBuzzDemo\SuperFizzBuzzDemo.csproj", "{ACCC6CDE-B194-4EC0-90E0-E4D03E1D1AC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzz.Tests", "FizzBuzz.Tests\FizzBuzz.Tests.csproj", "{BE22BE96-D69A-40DC-8C38-D235CDA72C46}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFizzBuzz.Tests", "SuperFizzBuzz.Tests\SuperFizzBuzz.Tests.csproj", "{BE22BE96-D69A-40DC-8C38-D235CDA72C46}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -7,7 +7,7 @@ namespace SuperFizzBuzz
     {
         public IEnumerable<FizzBuzzRule> RuleSet { get; }
 
-        public FizzBuzz(IEnumerable<FizzBuzzRule> ruleSet)
+        public FizzBuzz(params FizzBuzzRule[] ruleSet)
         {
             this.RuleSet = ruleSet;
         }
