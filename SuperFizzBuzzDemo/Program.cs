@@ -1,12 +1,13 @@
 ﻿using System;
+using SuperFizzBuzz;
 
-namespace SuperFizzBuzzDemo
+var fizzBuzz = new FizzBuzz(
+    new FizzBuzzRule(3, "Fizz"),
+    new FizzBuzzRule(7, "Buzz"),
+    new FizzBuzzRule(38, "Bazz")
+);
+
+foreach (var output in fizzBuzz.Run(-12,145))
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
-    }
+    Console.WriteLine(output);
 }
