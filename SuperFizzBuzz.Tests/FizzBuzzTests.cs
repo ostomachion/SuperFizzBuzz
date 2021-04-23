@@ -7,6 +7,25 @@ namespace SuperFizzBuzz.Tests
     public class FizzBuzzTests
     {
         [Theory]
+        [InlineData(52, "FrogDuck")]
+        [InlineData(36, "FrogChicken")]
+        [InlineData(468, "FrogDuckChicken")]
+        public void TestCasesFromRequirements(int value, string expectedOutput)
+        {
+            // Given
+            var fizzBuzz = new FizzBuzz(
+                new FizzBuzzRule(4, "Frog"),
+                new FizzBuzzRule(13, "Duck"),
+                new FizzBuzzRule(9, "Chicken"));
+            
+            // When
+            var output = fizzBuzz.Run(value);
+
+            // Then
+            Assert.Equal(expectedOutput, output);
+        }
+
+        [Theory]
         [InlineData(3)]
         [InlineData(6)]
         [InlineData(9)]
@@ -18,8 +37,8 @@ namespace SuperFizzBuzz.Tests
         {
             // Given
             var fizzBuzz = new FizzBuzz(
-                new FizzBuzzRule(3, "Fizz"),
-                new FizzBuzzRule(5, "Buzz"));
+                new FizzBuzzRule(4, "Fizz"),
+                new FizzBuzzRule(13, "Buzz"));
             
             // When
             var output = fizzBuzz.Run(value);
