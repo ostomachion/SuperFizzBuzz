@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SuperFizzBuzz
 {
@@ -14,7 +15,13 @@ namespace SuperFizzBuzz
 
         public string Run(int value)
         {
-            throw new NotImplementedException();
+            var tokens = RuleSet
+                .Where(rule => value % rule.Divisor == 0)
+                .Select(rule => rule.Token);
+
+            return tokens.Any() ?
+                String.Join("", tokens) :
+                value.ToString();
         }
 
         public IEnumerable<string> Run(int min, int max)
