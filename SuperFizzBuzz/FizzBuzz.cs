@@ -5,6 +5,13 @@ namespace SuperFizzBuzz
 {
     public class FizzBuzz
     {
+        public IEnumerable<FizzBuzzRule> RuleSet { get; }
+
+        public FizzBuzz(IEnumerable<FizzBuzzRule> ruleSet)
+        {
+            this.RuleSet = ruleSet;
+        }
+
         public string Run(int value)
         {
             throw new NotImplementedException();
