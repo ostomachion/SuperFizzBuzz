@@ -37,8 +37,8 @@ namespace SuperFizzBuzz.Tests
         {
             // Given
             var fizzBuzz = new FizzBuzz(
-                new FizzBuzzRule(4, "Fizz"),
-                new FizzBuzzRule(13, "Buzz"));
+                new FizzBuzzRule(3, "Fizz"),
+                new FizzBuzzRule(5, "Buzz"));
             
             // When
             var output = fizzBuzz.Run(value);
