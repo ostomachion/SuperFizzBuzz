@@ -7,7 +7,7 @@ var fizzBuzz = new FizzBuzz(
     new FizzBuzzRule(38, "Bazz")
 );
 
-foreach (var output in fizzBuzz.Run(-12,145))
+foreach (var output in fizzBuzz.Run(-12, 145))
 {
     Console.WriteLine(output);
 }
