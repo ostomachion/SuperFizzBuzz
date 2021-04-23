@@ -29,7 +29,7 @@ namespace SuperFizzBuzz
         public string Run(int value)
         {
             var tokens = RuleSet
-                .Where(rule => value % rule.Divisor == 0)
+                .Where(rule => rule.Accepts(value))
                 .Select(rule => rule.Token);
 
             return tokens.Any() ?

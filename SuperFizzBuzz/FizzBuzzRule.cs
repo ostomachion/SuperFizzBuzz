@@ -29,5 +29,12 @@ namespace SuperFizzBuzz
             Divisor = divisor;
             Token = token ?? throw new ArgumentNullException(nameof(token));
         }
+
+        /// <summary>
+        /// Determines wheter this rules accepts the provided value.
+        /// </summary>
+        /// <param name="value">The value to test.</param>
+        /// <returns>True if the value is divisible by this rule's divisor; otherwise, false.</returns>
+        public bool Accepts(int value) => value % Divisor == 0;
     }
 }
