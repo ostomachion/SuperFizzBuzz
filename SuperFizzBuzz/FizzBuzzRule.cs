@@ -31,7 +31,7 @@ namespace SuperFizzBuzz
         }
 
         /// <summary>
-        /// Determines wheter this rules accepts the provided value.
+        /// Determines whether this rules accepts the provided value.
         /// </summary>
         /// <param name="value">The value to test.</param>
         /// <returns>True if the value is divisible by this rule's divisor; otherwise, false.</returns>

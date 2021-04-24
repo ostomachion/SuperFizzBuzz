@@ -23,7 +23,7 @@ namespace SuperFizzBuzz
         /// </summary>
         /// <param name="value">The number to run through the rule-set.</param>
         /// <returns>
-        /// The result of running the provieded number through the rule-set. If no rule is matched, the number is
+        /// The result of running the provided number through the rule-set. If no rule is matched, the number is
         /// returned as a string, otherwise, the matched rules' tokens are concatenated and returned.
         /// </returns>
         public string Run(int value)
