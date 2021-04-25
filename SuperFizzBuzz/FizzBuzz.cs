@@ -30,11 +30,10 @@ namespace SuperFizzBuzz
         {
             var tokens = RuleSet
                 .Where(rule => rule.Accepts(value))
-                .Select(rule => rule.Token);
+                .Select(rule => rule.Token)
+                .DefaultIfEmpty(value.ToString());
 
-            return tokens.Any() ?
-                String.Join("", tokens) :
-                value.ToString();
+            return String.Join("", tokens);
         }
 
         /// <summary>
