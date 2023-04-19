@@ -1,4 +1,5 @@
 using System;
+
 namespace SuperFizzBuzz
 {
     /// <summary>
@@ -24,7 +25,9 @@ namespace SuperFizzBuzz
         public FizzBuzzRule(int divisor, string token)
         {
             if (divisor <= 0)
+            {
                 throw new ArgumentException("Divisor must be positive.", nameof(divisor));
+            }
                 
             Divisor = divisor;
             Token = token ?? throw new ArgumentNullException(nameof(token));
